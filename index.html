@@ -5143,6 +5143,15 @@
 <script type="text/javascript"
   src="./waffle-en/main-na-v2.js?version=20240126080623"></script>
 
+<script>
+  function sendHeight() {
+    const height = document.body.scrollHeight;
+    parent.postMessage({ frameHeight: height }, '*');
+  }
+
+  window.addEventListener('load', sendHeight);
+  window.addEventListener('resize', sendHeight);
+</script>
 
 
 
